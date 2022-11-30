@@ -12,6 +12,7 @@
         <module>qabox-ext</module>
         <module>qabox-integration</module>
         <module>qabox-utils</module>
+        <module>qabox-admin</module>
     </modules>
 
     <properties>

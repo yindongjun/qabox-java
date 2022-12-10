@@ -1,0 +1,5 @@
+SET FOREIGN_KEY_CHECKS=0;
+ALTER TABLE `at_message` ADD COLUMN `body_to_query` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT '0' COMMENT 'body体内容转query参数' AFTER `project_id`;
+INSERT INTO `at_global_setting`(`setting_id`, `setting_name`, `default_value`, `setting_value`, `mark`) VALUES (26, 'messageCallHomeUrl', '0', '0', '接口自动化内部请求地址');
+UPDATE `at_operation_interface` SET `op_name` = '从测试结果中获取视图数据', `call_name` = 'ptr-analyseView', `is_parent` = 'false', `op_type` = NULL, `mark` = '', `status` = '0', `parent_op_id` = 1078, `permission_mark` = NULL, `page_name` = NULL WHERE `op_id` = 1091;
+SET FOREIGN_KEY_CHECKS=1;

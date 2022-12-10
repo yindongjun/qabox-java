@@ -1,0 +1,28 @@
+server:
+  port: 1234
+  servlet:
+    encoding:
+      force: true
+      charset: UTF-8
+    context-path: /builder
+spring:
+  banner:
+    charset: UTF-8
+  application:
+    name: jpa-code-builder
+  freemarker:
+    request-context-attribute: request
+    suffix: .ftl
+    content-type: text/html
+    enabled: true
+    cache: false
+    charset: UTF-8
+    allow-request-override: false
+    expose-request-attributes: true
+    expose-session-attributes: true
+    expose-spring-macro-helpers: true
+    settings:
+      number_format: 0.##
+      default_encoding: UTF-8
+  mvc:
+    static-path-pattern: /static/**

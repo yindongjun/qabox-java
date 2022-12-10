@@ -1,0 +1,1 @@
+https://github.com/wjw465150/JpaCodeBuilder.git

@@ -1,0 +1,8 @@
+SET FOREIGN_KEY_CHECKS=0;
+ALTER TABLE `at_business_system` ADD COLUMN `use_proxy` char(1) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT '0' COMMENT '是否使用代理' AFTER `mark`;
+ALTER TABLE `at_business_system` ADD COLUMN `proxy_host` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '代理ip' AFTER `use_proxy`;
+ALTER TABLE `at_business_system` ADD COLUMN `proxy_port` int(5) NULL DEFAULT NULL COMMENT '代理端口' AFTER `proxy_host`;
+ALTER TABLE `at_business_system` ADD COLUMN `proxy_username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '代理认证用户名' AFTER `proxy_port`;
+ALTER TABLE `at_business_system` ADD COLUMN `proxy_password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '代理认证密码' AFTER `proxy_username`;
+ALTER TABLE `at_test_result` ADD COLUMN `proxy_info` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '代理服务器的信息' AFTER `business_system_name`;
+SET FOREIGN_KEY_CHECKS=1;

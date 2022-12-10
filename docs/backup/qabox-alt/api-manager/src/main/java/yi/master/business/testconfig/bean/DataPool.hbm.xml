@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="yi.master.business.testconfig.bean.DataPool" table="at_data_pool">
+        <id name="poolId" type="java.lang.Integer">
+            <column name="pool_id" />
+            <generator class="native"></generator>
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="name" length="255"/>
+        </property>
+        <property name="mark" type="java.lang.String">
+            <column name="mark" length="65535" />
+        </property>
+        <many-to-one name="user" class="yi.master.business.user.bean.User" fetch="join">
+            <column name="user_id" />
+        </many-to-one>
+        <property name="createTime" type="java.util.Date">
+            <column name="create_time" length="19"/>
+        </property>
+        <set name="dataItems" inverse="true" lazy="true" cascade="all" order-by="create_time">
+            <key>
+                <column name="pool_id" />
+            </key>
+            <one-to-many class="yi.master.business.testconfig.bean.PoolDataItem" />
+        </set>
+        <set name="dataNames" inverse="true" lazy="true" cascade="all" order-by="create_time">
+            <key>
+                <column name="pool_id" />
+            </key>
+            <one-to-many class="yi.master.business.testconfig.bean.PoolDataName" />
+        </set>
+        <set name="testConfigs" lazy="true">
+            <key>
+                <column name="pool_id" />
+            </key>
+            <one-to-many class="yi.master.business.testconfig.bean.TestConfig" />
+        </set>
+        <many-to-one name="projectInfo" class="yi.master.business.system.bean.ProjectInfo" fetch="join">
+            <column name="project_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,31 @@
+<div class="page-container" style="padding:10px;">
+    <div class="cl pd-5 bg-1 bk-gray">
+        <span class="r"> <a href="javascript:;" class="btn btn-primary radius" id="confirm-batch-add">确认批量新增</a></span></div>
+    <span>
+        <p style="color:red;"><strong>通过以下指定的JSON报文来批量新增多个或者全部接口下的参数信息，并可以将更新到关联的报文信息</strong></p>
+        <p>
+            <span class="label label-secondary radius">ids</span>: 要更新的接口ID集合，多个以逗号分隔，传入all|All表示更新到全部的接口下 <span class="label label-danger radius">必填</span><br>
+            <span class="label label-secondary radius">batchUpdateMessage</span>: 是否同步更新参数到接口下的所有报文信息中 <span class="label label-danger radius">必填</span><br>
+            <span class="label label-secondary radius">updateParam.attributes</span>: 参数的节点属性，key=value形式，多个;号分隔<br>
+            <span class="label label-secondary radius">updateParam.path</span>: 参数的节点路径，不包括自己的节点名，根节点则为空<br>
+            <span class="label label-secondary radius">updateParam.type</span>: 参数的类型，支持String,Number等 <span class="label label-danger radius">必填</span><br>
+            <span class="label label-secondary radius">updateParam.defaultValue</span>: 参数的默认值<br>
+            <span class="label label-secondary radius">updateParam.mark</span>: 参数的备注<br>
+            <span class="label label-secondary radius">updateParam.parameterIdentify</span>: 参数的标识 <span class="label label-danger radius">必填</span><br>
+            <span class="label label-secondary radius">updateParam.parameterName</span>: 参数的名称，一般为中文释义
+        </p>
+    </span>
+    <textarea style="height: 220px;" class="textarea radius" id="batch-add-param-json">
+        {
+            "ids":"all",
+            "batchUpdateMessage": true,
+            "updateParam.attributes": "",
+            "updateParam.path": "",
+            "updateParam.type": "",
+            "updateParam.defaultValue": "",
+            "updateParam.mark": "",
+            "updateParam.parameterIdentify": "",
+            "updateParam.parameterName": ""
+        }
+    </textarea>
+</div>

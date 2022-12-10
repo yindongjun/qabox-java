@@ -1,0 +1,3 @@
+SET FOREIGN_KEY_CHECKS=0;
+ALTER TABLE `at_message_scene` MODIFY COLUMN `response_example` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT '返回示例报文' AFTER `scene_name`;
+SET FOREIGN_KEY_CHECKS=1;

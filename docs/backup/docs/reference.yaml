@@ -1,0 +1,35 @@
+mindmapping:
+  - https://github.com/diduweiwu/xminder.git
+  - https://github.com/cloudphr/mindmap.git
+excel:
+  - https://github.com/liaochong/myexcel.git
+bi:
+  - https://github.com/shzlw/poli.git
+server:
+  - https://github.com/noboomu/proteus.git
+db:
+  - https://github.com/d3adspace/phoenix.git
+format-converter:
+  - https://github.com/felixklauke/kira.git
+openapi:
+  -https://github.com/ambertests/explore-with-postman.git
+pdf-docs:
+  - https://github.com/wing328/docspring-java
+
+proxy:
+  - https://github.com/monkeyWie/proxyee.git
+
+integration:
+  - https://github.com/yydzxz/ByteDanceOpen.git
+
+framework:
+  - https://github.com/Tencent/APIJSON.git
+
+api-tools:
+  -  https://github.com/typicode/json-server.git
+
+mock:
+  - https://gitee.com/ForteScarlet/Mock.java.git
+
+service-visualization:
+  - https://github.com/SpectoLabs/hoverfly.git

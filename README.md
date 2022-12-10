@@ -1,3 +1,3 @@
 # README
 
-Demo for build a Test Web Applicaiton.
+Demo for build a Test Web Application.

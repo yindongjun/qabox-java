@@ -12,6 +12,7 @@
         <module>qabox-bytedance</module>
         <module>qabox-vika</module>
         <module>qabox-feishu</module>
+        <module>qabox-qe</module>
     </modules>
     <artifactId>qabox-integration</artifactId>
     <packaging>pom</packaging>
